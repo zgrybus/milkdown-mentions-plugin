@@ -25,39 +25,23 @@ const names = [
 ];
 
 export const MentionsListDropdownView: React.FC<MentionsListDropdownProps> = ({
-  onMentionItemClick,
   queryText,
+  onMentionItemClick,
 }) => {
   const options = names.filter(name => name.includes(queryText));
 
   if (!options.length) {
-    return (
-      <div
-        style={{
-          padding: '5px',
-          background: 'red',
-        }}
-      >
-        Found nothing
-      </div>
-    );
+    return <div className="mentions-list-empty-dropdown">Found nothing</div>;
   }
   return (
     <ul
+      className="mentions-dropdown-list"
       data-testid="mentioning-dropdown-list"
-      style={{
-        minWidth: '100px',
-        padding: '5px',
-        marginTop: 0,
-        background: 'red',
-        listStyleType: 'none',
-      }}
     >
       {options.map(option => (
-        <li key={option}>
+        <li key={option} className="mentions-dropdown-list-item">
           <button
             data-testid="mentioning-dropdown-list-item"
-            style={{ padding: '4px' }}
             onClick={e => {
               e.stopPropagation();
               onMentionItemClick(option, 'https://test/user/' + option);

@@ -6,7 +6,7 @@ export const App: React.FC = () => {
   useMilkdown({ defaultMarkdownValue: 'abc' });
 
   return (
-    <div>
+    <div className="app-container">
       <MilkdownEditor />
     </div>
   );
