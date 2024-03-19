@@ -1,25 +1,33 @@
 {
   "name": "milkdown-mentions-plugin",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "exports": {
-    "./package.json": "./package.json",
     ".": {
-      "import": "./index.js",
-      "default": "./index.cjs"
+      "types": "./dist/main.d.ts",
+      "import": "./dist/milkdown-mentions-plugin.js",
+      "default": "./dist/milkdown-mentions-plugin.js"
     }
   },
-  "main": "index.cjs",
-  "types": "index.d.ts",
+  "types": "./dist/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@milkdown/core": "^7.3.5",
     "@milkdown/ctx": "^7.3.5",
+    "@milkdown/preset-commonmark": "^7.3.5",
+    "@milkdown/prose": "^7.3.5",
+    "@milkdown/react": "^7.3.5",
     "@milkdown/transformer": "^7.3.5",
+    "@prosemirror-adapter/react": "^0.2.6",
+    "@types/react": "^18.2.67",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
     "@typescript-eslint/parser": "^7.3.1",
     "eslint": "^8.57.0",
@@ -31,17 +39,19 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2",
-    "vite": "^5.1.6"
+    "vite": "^5.1.6",
+    "vite-plugin-dts": "^3.7.3"
   },
   "peerDependencies": {
+    "@milkdown/react": ">=7.3.3",
     "@milkdown/core": ">=7.3.3",
-    "@milkdown/preset-commonmark": ">=7.3.3"
+    "@milkdown/preset-commonmark": ">=7.3.3",
+    "@milkdown/prose": ">=7.3.3",
+    "@prosemirror-adapter/react": ">=0.2.6",
+    "react": ">18.0.0",
+    "react-dom": ">18.0.0"
   },
   "dependencies": {
-    "@milkdown/core": "^7.3.5",
-    "@milkdown/preset-commonmark": "^7.3.5",
-    "@milkdown/prose": "^7.3.5",
-    "@milkdown/utils": "^7.3.5",
-    "@prosemirror-adapter/react": "^0.2.6"
+    "@milkdown/utils": "^7.3.5"
   }
 }
