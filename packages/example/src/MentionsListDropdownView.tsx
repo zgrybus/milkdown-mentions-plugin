@@ -31,15 +31,12 @@ export const MentionsListDropdownView: React.FC<MentionsListDropdownProps> = ({
   const options = names.filter(name => name.includes(queryText));
 
   if (!options.length) {
-    return <div className="mentions-list-empty-dropdown">Found nothing</div>;
+    return <div>Found nothing</div>;
   }
   return (
-    <ul
-      className="mentions-dropdown-list"
-      data-testid="mentioning-dropdown-list"
-    >
+    <ul data-testid="mentioning-dropdown-list">
       {options.map(option => (
-        <li key={option} className="mentions-dropdown-list-item">
+        <li key={option}>
           <button
             data-testid="mentioning-dropdown-list-item"
             onClick={e => {

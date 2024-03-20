@@ -11,7 +11,8 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "plugin:tailwindcss/recommended"
   ],
   "rules": {
     "@typescript-eslint/no-namespace": "off",
