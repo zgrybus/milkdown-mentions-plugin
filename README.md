@@ -6,6 +6,8 @@
 This library allows you to tag people, for example. **Of course, you can tag anything or anyone you want, because the library provides options to render a list of people or things you want to tag**, as well as the page to which the user will be redirected after clicking on the tag. 
 **Additionally, the library transforms the tag into a link.**
 
+![Demo](https://github.com/zgrybus/milkdown-mentions-plugin/blob/master/demo.mp4)
+
 ## Using library
 
 Using `npm`
