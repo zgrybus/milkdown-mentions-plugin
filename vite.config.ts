@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import { peerDependencies } from "./package.json";
+
+import { peerDependencies } from './package.json';
 
 export default defineConfig({
   plugins: [
@@ -11,7 +12,7 @@ export default defineConfig({
   build: {
     minify: true,
     lib: {
-      entry: 'src/main.ts',
+      entry: 'packages/lib/main.ts',
       name: 'milkdown-mentions-plugin',
     },
     emptyOutDir: true,
