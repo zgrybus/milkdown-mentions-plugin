@@ -1,7 +1,14 @@
 {
   "name": "milkdown-mentions-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
+  "keywords": [
+    "milkdown",
+    "mentions",
+    "milkdown plugin",
+    "tag"
+  ],
+  "license": "MIT",
   "files": ["dist"],
   "exports": {
     ".": {
