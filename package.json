@@ -5,7 +5,8 @@
   "keywords": [
     "milkdown",
     "mentions",
-    "milkdown plugin"
+    "milkdown plugin",
+    "tag"
   ],
   "license": "MIT",
   "files": ["dist"],

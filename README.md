@@ -8,7 +8,7 @@
 This library wraps [Milkdown](https://milkdown.dev/) and allows you to tag people, for example. **Of course, you can tag anything or anyone you want, because the library provides options to render a list of people or things you want to tag**, as well as the page to which the user will be redirected after clicking on the tag. 
 **Additionally, the library transforms the tag into a link.**
 
-![Demo](https://github.com/zgrybus/milkdown-mentions-plugin/blob/master/plugin_demo.gif)
+![Demo](https://github.com/zgrybus/milkdown-mentions-plugin/blob/master/assets/plugin_demo.gif)
 
 ## Using library
 
@@ -76,3 +76,11 @@ export const MyMentionsPluginDropdownView: React.FC<MentionsListDropdownProps> =
     )
 }
 ```
+
+## Troubleshoots
+
+
+### After selecting the thing I want to tag, each subsequent word is a link
+
+![Demo](https://github.com/zgrybus/milkdown-mentions-plugin/blob/master/assets/subsequent_word_troubleshoot.gif)
+This is a problem that many people who use Milkdown struggle with. To fix this, just add the following plugin mentioned in this issue: https://github.com/orgs/Milkdown/discussions/1114
